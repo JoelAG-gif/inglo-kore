@@ -3,7 +3,7 @@ export interface Props {
   title: string;
   description?: string;
 }
-const { title, description = 'Aprende inglés americano y británico con INGLŌ KŌRE. Niveles A1 a C2, misiones diarias y certificados.' } = Astro.props;
+const { title, description = 'Aprende inglés americano y británico con INGLŌ KŌRE. Niveles A1 a C2, conversación con IA, misiones diarias y certificados.' } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -17,53 +17,35 @@ const { title, description = 'Aprende inglés americano y británico con INGLŌ 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style is:global>
     :root {
-      --navy: #0A1628;
-      --navy2: #0D1E35;
-      --mid: #1A3A6B;
-      --accent: #2A6BB5;
-      --light: #4A9FE8;
-      --gold: #F5A623;
-      --gold2: #D4891A;
-      --gold3: #FFD060;
-      --green: #1DB87A;
-      --red: #E8453C;
-      --purple: #9B59B6;
-      --white: #FFFFFF;
-      --muted: rgba(255,255,255,0.55);
-      --muted2: rgba(255,255,255,0.3);
-      --border: rgba(255,255,255,0.07);
-      --border2: rgba(255,255,255,0.12);
+      --navy: #0A1628; --navy2: #0D1E35; --mid: #1A3A6B;
+      --accent: #2A6BB5; --light: #4A9FE8; --gold: #F5A623;
+      --gold2: #D4891A; --green: #1DB87A; --red: #E8453C;
+      --purple: #9B59B6; --white: #FFFFFF;
+      --muted: rgba(255,255,255,0.55); --muted2: rgba(255,255,255,0.3);
+      --border: rgba(255,255,255,0.07); --border2: rgba(255,255,255,0.12);
     }
     *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body { background: var(--navy); color: var(--white); font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
 
-    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      padding: 16px 48px;
-      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 48px; display: flex; align-items: center; justify-content: space-between;
       background: rgba(10,22,40,0.82); backdrop-filter: blur(24px);
-      border-bottom: 1px solid var(--border);
-      transition: background 0.3s;
+      border-bottom: 1px solid var(--border); transition: background 0.3s;
     }
     .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-brand img { width: 36px; height: 36px; border-radius: 8px; }
     .nav-brand-txt { font-family: 'Cinzel', serif; font-size: 1.1rem; font-weight: 900; letter-spacing: 2px; color: var(--white); }
     .nav-brand-txt span { color: var(--gold); }
-    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
     .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.88rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--white); }
-    .nav-dl {
-      background: var(--gold); color: var(--navy) !important; font-weight: 700 !important;
-      padding: 9px 22px; border-radius: 100px;
-      transition: transform 0.2s, box-shadow 0.2s !important;
-    }
+    .nav-dl { background: var(--gold); color: var(--navy) !important; font-weight: 700 !important; padding: 9px 22px; border-radius: 100px; transition: transform 0.2s, box-shadow 0.2s !important; }
     .nav-dl:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(245,166,35,0.4) !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; }
 
-    /* BUTTONS */
     .btn-gold {
       display: inline-flex; align-items: center; gap: 10px;
       background: linear-gradient(135deg, var(--gold), var(--gold2));
@@ -83,24 +65,20 @@ const { title, description = 'Aprende inglés americano y británico con INGLŌ 
     }
     .btn-ghost:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); }
 
-    /* SECTIONS */
     section { padding: 100px 24px; position: relative; }
     .container { max-width: 1100px; margin: 0 auto; }
     .s-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
     .s-title { font-family: 'Cinzel', serif; font-size: clamp(2rem,4vw,3rem); font-weight: 700; line-height: 1.15; margin-bottom: 18px; }
-    .s-desc { font-size: 1rem; color: var(--muted); line-height: 1.75; max-width: 520px; }
+    .s-desc { font-size: 1rem; color: var(--muted); line-height: 1.75; max-width: 560px; }
 
-    /* MARQUEE */
     .marquee-wrap { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: rgba(255,255,255,0.02); padding: 18px 0; overflow: hidden; }
     .marquee-track { display: flex; gap: 36px; width: max-content; animation: marquee 22s linear infinite; }
     .m-chip { display: flex; align-items: center; gap: 10px; white-space: nowrap; font-size: 0.82rem; font-weight: 600; color: var(--muted); }
     .m-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 
-    /* REVEAL */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* FOOTER */
     footer { border-top: 1px solid var(--border); padding: 44px 40px; text-align: center; }
     .ft-logo { font-family: 'Cinzel', serif; font-size: 1.4rem; font-weight: 900; letter-spacing: 3px; margin-bottom: 20px; display: block; }
     .ft-logo span { color: var(--gold); }
@@ -109,21 +87,15 @@ const { title, description = 'Aprende inglés americano y británico con INGLŌ 
     .ft-links a:hover { color: var(--white); }
     .ft-copy { font-size: 0.76rem; color: rgba(255,255,255,0.22); }
 
-    /* KEYFRAMES */
     @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes iconFloat { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
     @keyframes goldPulse { 0%,100% { box-shadow: 0 0 40px rgba(245,166,35,0.4); } 50% { box-shadow: 0 0 80px rgba(245,166,35,0.7); } }
 
-    /* MOBILE */
     @media(max-width:900px) {
       nav { padding: 14px 20px; }
       .hamburger { display: flex; }
-      .nav-links {
-        display: none; position: fixed; top: 64px; left: 0; right: 0;
-        background: rgba(10,22,40,0.98); flex-direction: column; align-items: center;
-        padding: 28px; gap: 22px; border-bottom: 1px solid var(--border); z-index: 199;
-      }
+      .nav-links { display: none; position: fixed; top: 64px; left: 0; right: 0; background: rgba(10,22,40,0.98); flex-direction: column; align-items: center; padding: 28px; gap: 22px; border-bottom: 1px solid var(--border); z-index: 199; }
       .nav-links.open { display: flex; }
       section { padding: 70px 20px; }
       footer { padding: 36px 20px; }
@@ -132,7 +104,6 @@ const { title, description = 'Aprende inglés americano y británico con INGLŌ 
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="mainNav">
   <a href="/" class="nav-brand">
     <img src="/icon.png" alt="INGLŌ KŌRE"/>
@@ -140,26 +111,24 @@ const { title, description = 'Aprende inglés americano y británico con INGLŌ 
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="/#funciones">Funciones</a></li>
+    <li><a href="/#conversacion">Conversación IA</a></li>
     <li><a href="/#niveles">Niveles</a></li>
-    <li><a href="/#misiones">Misiones</a></li>
     <li><a href="/#precios">Precios</a></li>
     <li><a href="/privacidad">Privacidad</a></li>
     <li><a href="/terminos">Términos</a></li>
     <li><a href="https://play.google.com/store" target="_blank" class="nav-dl">Descargar</a></li>
   </ul>
-  <button class="hamburger" id="hbg" aria-label="Menú">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="hamburger" id="hbg" aria-label="Menú"><span></span><span></span><span></span></button>
 </nav>
 
 <slot/>
 
-<!-- FOOTER -->
 <footer>
   <span class="ft-logo">INGLŌ <span>KŌRE</span></span>
   <div class="ft-links">
     <a href="/">Inicio</a>
     <a href="/#funciones">Funciones</a>
+    <a href="/#conversacion">Conversación IA</a>
     <a href="/#niveles">Niveles</a>
     <a href="/#precios">Precios</a>
     <a href="/privacidad">Política de Privacidad</a>
@@ -170,22 +139,16 @@ const { title, description = 'Aprende inglés americano y británico con INGLŌ 
 </footer>
 
 <script>
-  // Hamburger
   document.getElementById('hbg')?.addEventListener('click', () => {
     document.getElementById('navLinks')?.classList.toggle('open');
   });
   document.querySelectorAll('.nav-links a').forEach(a => {
     a.addEventListener('click', () => document.getElementById('navLinks')?.classList.remove('open'));
   });
-
-  // Nav scroll
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('mainNav');
     if (nav) nav.style.background = window.scrollY > 60 ? 'rgba(10,22,40,0.97)' : 'rgba(10,22,40,0.82)';
   });
-
-  // Reveal
-  const reveals = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver(entries => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
@@ -194,7 +157,7 @@ const { title, description = 'Aprende inglés americano y británico con INGLŌ 
       }
     });
   }, { threshold: 0.08 });
-  reveals.forEach(r => obs.observe(r));
+  document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
 </script>
 </body>
 </html>

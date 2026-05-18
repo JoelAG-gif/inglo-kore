@@ -1,17 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Política de Privacidad — INGLŌ KŌRE" description="Política de privacidad de INGLŌ KŌRE. Información sobre recopilación de datos, AdMob, RevenueCat y tus derechos.">
-
+<Layout title="Política de Privacidad — INGLŌ KŌRE">
 <style>
   .legal-page { padding: 110px 24px 80px; max-width: 800px; margin: 0 auto; }
-  .legal-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(245,166,35,0.08); border: 1px solid rgba(245,166,35,0.2);
-    border-radius: 100px; padding: 7px 18px;
-    font-size: 0.72rem; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase;
-    margin-bottom: 20px;
-  }
+  .legal-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(245,166,35,0.08); border: 1px solid rgba(245,166,35,0.2); border-radius: 100px; padding: 7px 18px; font-size: 0.72rem; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
   .legal-title { font-family: 'Cinzel', serif; font-size: clamp(2rem,5vw,3.2rem); font-weight: 900; line-height: 1.1; margin-bottom: 14px; }
   .legal-date { font-size: 0.82rem; color: var(--muted); margin-bottom: 48px; }
   .legal-divider { height: 1px; background: var(--border); margin: 40px 0; }
@@ -21,122 +14,64 @@ import Layout from '../layouts/Layout.astro';
   li { font-size: 0.92rem; color: var(--muted); line-height: 1.85; margin-bottom: 8px; }
   a { color: var(--light); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .info-box {
-    background: rgba(245,166,35,0.06); border: 1px solid rgba(245,166,35,0.18);
-    border-radius: 14px; padding: 22px 24px; margin: 28px 0;
-  }
+  .info-box { background: rgba(245,166,35,0.06); border: 1px solid rgba(245,166,35,0.18); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
   .info-box p { margin: 0; color: rgba(255,255,255,0.65); }
-  .contact-box {
-    background: rgba(74,159,232,0.07); border: 1px solid rgba(74,159,232,0.18);
-    border-radius: 14px; padding: 26px; margin-top: 28px;
-    display: flex; flex-direction: column; gap: 6px;
-  }
+  .contact-box { background: rgba(74,159,232,0.07); border: 1px solid rgba(74,159,232,0.18); border-radius: 14px; padding: 26px; margin-top: 28px; display: flex; flex-direction: column; gap: 6px; }
   .contact-box strong { color: var(--white); font-size: 0.95rem; }
   .contact-box span { color: var(--muted); font-size: 0.88rem; }
 </style>
-
 <div class="legal-page">
   <div class="legal-badge">📄 Legal</div>
   <h1 class="legal-title">Política de Privacidad</h1>
   <p class="legal-date">Última actualización: 1 de mayo de 2026 · INGLŌ KŌRE — Novark Systems</p>
-
-  <div class="info-box">
-    <p>🦁 En Novark Systems respetamos tu privacidad. Esta política explica de forma clara y transparente qué información recopilamos, cómo la usamos y cuáles son tus derechos. Contacto: <a href="mailto:novarksystemstech@gmail.com">novarksystemstech@gmail.com</a></p>
-  </div>
-
+  <div class="info-box"><p>🦁 En Novark Systems respetamos tu privacidad. Esta política explica de forma clara qué información recopilamos, cómo la usamos y cuáles son tus derechos. Contacto: <a href="mailto:novarksystemstech@gmail.com">novarksystemstech@gmail.com</a></p></div>
   <div class="legal-divider"></div>
-
   <h2>1. Responsable del tratamiento</h2>
-  <ul>
-    <li><strong>Empresa:</strong> Novark Systems</li>
-    <li><strong>RUC:</strong> 10759325759</li>
-    <li><strong>País:</strong> Perú</li>
-    <li><strong>Correo:</strong> <a href="mailto:novarksystemstech@gmail.com">novarksystemstech@gmail.com</a></li>
-  </ul>
-
+  <ul><li><strong>Empresa:</strong> Novark Systems</li><li><strong>RUC:</strong> 10759325759</li><li><strong>País:</strong> Perú</li><li><strong>Correo:</strong> <a href="mailto:novarksystemstech@gmail.com">novarksystemstech@gmail.com</a></li></ul>
   <div class="legal-divider"></div>
-
   <h2>2. Información que recopilamos</h2>
-  <p>INGLŌ KŌRE está diseñada respetando al máximo tu privacidad. La mayoría de tu información se almacena <strong>localmente en tu dispositivo</strong> y nunca sale de él sin tu consentimiento.</p>
-  <p><strong>Datos almacenados localmente (en tu dispositivo):</strong></p>
-  <ul>
-    <li>Tu progreso por nivel y módulo</li>
-    <li>Tus errores y preguntas respondidas</li>
-    <li>Tu racha diaria y estadísticas de uso</li>
-    <li>Tu preferencia de acento (americano / británico)</li>
-    <li>Misiones diarias completadas</li>
-  </ul>
-  <p><strong>Datos recopilados por terceros con tu permiso:</strong></p>
-  <ul>
-    <li><strong>Google AdMob:</strong> Si ves anuncios, Google puede recopilar un identificador publicitario anónimo para mostrarte publicidad relevante.</li>
-    <li><strong>RevenueCat:</strong> Si realizas una compra, RevenueCat procesa la información de suscripción para verificar y gestionar tu acceso Premium. No almacena datos de tarjeta de crédito.</li>
-  </ul>
-
+  <p>INGLŌ KŌRE está diseñada respetando tu privacidad. La mayoría de tu información se almacena <strong>localmente en tu dispositivo</strong>.</p>
+  <p><strong>Datos locales (solo en tu dispositivo):</strong></p>
+  <ul><li>Progreso por nivel y módulo</li><li>Errores y preguntas respondidas</li><li>Racha diaria y estadísticas de uso</li><li>Preferencia de acento (americano / británico)</li><li>Misiones diarias completadas</li></ul>
+  <p><strong>Datos de la función de Conversación con IA:</strong></p>
+  <ul><li>Las conversaciones de voz se convierten en texto usando el reconocimiento de voz de tu dispositivo (Google Speech) — Novark Systems no almacena grabaciones de audio.</li><li>El texto de las conversaciones se envía a nuestro servidor proxy para ser evaluado por la IA. No se almacena de forma permanente.</li></ul>
+  <p><strong>Datos de terceros:</strong></p>
+  <ul><li><strong>Google AdMob:</strong> Identificador publicitario anónimo (solo usuarios gratuitos).</li><li><strong>RevenueCat:</strong> Verifica y gestiona tu suscripción Premium.</li></ul>
   <div class="legal-divider"></div>
-
   <h2>3. Cómo usamos tu información</h2>
-  <ul>
-    <li>Mostrar tu progreso, racha y estadísticas dentro de la app</li>
-    <li>Recordar en qué módulo te quedaste</li>
-    <li>Gestionar tu suscripción Premium (si aplica)</li>
-    <li>Mostrar anuncios (usuarios gratuitos)</li>
-    <li>Mejorar la experiencia de la app</li>
-  </ul>
-  <p>No vendemos, alquilamos ni compartimos tu información personal con terceros para fines comerciales.</p>
-
+  <ul><li>Mostrar tu progreso y estadísticas dentro de la app</li><li>Evaluar tus respuestas en las conversaciones con IA y darte feedback</li><li>Gestionar tu suscripción Premium</li><li>Mostrar anuncios (usuarios gratuitos)</li><li>Mejorar la experiencia de la app</li></ul>
+  <p>No vendemos ni compartimos tu información personal con terceros para fines comerciales.</p>
   <div class="legal-divider"></div>
-
-  <h2>4. Publicidad (AdMob)</h2>
-  <p>Los usuarios gratuitos pueden ver anuncios de <strong>Google AdMob</strong>. AdMob puede recopilar el identificador publicitario de tu dispositivo (GAID en Android) e información técnica del dispositivo.</p>
-  <p>Para desactivar la publicidad personalizada: <strong>Ajustes → Google → Anuncios → Inhabilitar personalización de anuncios</strong>.</p>
-  <p>Los usuarios <strong>Premium</strong> no ven anuncios.</p>
-  <p>Más información: <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad de Google</a></p>
-
+  <h2>4. Conversación con IA</h2>
+  <p>La función de conversación usa reconocimiento de voz del dispositivo para convertir tu voz a texto. Ese texto se envía a nuestro servidor seguro que lo procesa con una IA para evaluar tu inglés y generar respuestas. Las conversaciones no se almacenan de forma permanente en nuestros servidores.</p>
   <div class="legal-divider"></div>
-
-  <h2>5. Compras y suscripciones (RevenueCat)</h2>
-  <p>Las compras son procesadas por <strong>Google Play</strong>. Novark Systems no tiene acceso a tus datos de pago. RevenueCat actúa como intermediario para verificar y gestionar el estado de tu suscripción.</p>
-  <p>Más información: <a href="https://www.revenuecat.com/privacy" target="_blank">Política de privacidad de RevenueCat</a></p>
-
+  <h2>5. Publicidad (AdMob)</h2>
+  <p>Los usuarios gratuitos pueden ver anuncios de Google AdMob. Para desactivar la publicidad personalizada: <strong>Ajustes → Google → Anuncios → Inhabilitar personalización</strong>. Los usuarios <strong>Premium</strong> no ven anuncios.</p>
+  <p>Más info: <a href="https://policies.google.com/privacy" target="_blank">Política de privacidad de Google</a></p>
   <div class="legal-divider"></div>
-
-  <h2>6. Almacenamiento de datos</h2>
-  <p>Tu progreso, errores y configuración se guardan <strong>únicamente en tu dispositivo</strong> usando SQLite. No hay servidores externos de Novark Systems que almacenen esta información.</p>
-  <p>Si desinstalas la app o usas la función "Reiniciar progreso" en Ajustes, todos los datos locales se eliminan permanentemente.</p>
-
+  <h2>6. Compras (RevenueCat)</h2>
+  <p>Las compras son procesadas por <strong>Google Play</strong>. Novark Systems no tiene acceso a tus datos de pago. Más info: <a href="https://www.revenuecat.com/privacy" target="_blank">Política de RevenueCat</a></p>
   <div class="legal-divider"></div>
-
-  <h2>7. Menores de edad</h2>
-  <p>INGLŌ KŌRE está diseñada para usuarios de <strong>13 años o más</strong>. No recopilamos intencionadamente información personal de menores de 13 años. Si eres padre o tutor y crees que tu hijo ha proporcionado información, contáctanos.</p>
-
+  <h2>7. Almacenamiento de datos</h2>
+  <p>Tu progreso se guarda <strong>únicamente en tu dispositivo</strong> usando SQLite. Si desinstalas la app o usas "Reiniciar progreso" en Ajustes, todos los datos locales se eliminan permanentemente.</p>
   <div class="legal-divider"></div>
-
-  <h2>8. Tus derechos</h2>
-  <ul>
-    <li><strong>Acceso:</strong> Saber qué información tenemos sobre ti</li>
-    <li><strong>Rectificación:</strong> Corregir información inexacta</li>
-    <li><strong>Eliminación:</strong> Solicitar la eliminación de tus datos</li>
-    <li><strong>Portabilidad:</strong> Obtener una copia de tus datos</li>
-    <li><strong>Oposición:</strong> Oponerte al tratamiento de tus datos</li>
-  </ul>
-
+  <h2>8. Menores de edad</h2>
+  <p>INGLŌ KŌRE está diseñada para usuarios de <strong>13 años o más</strong>. No recopilamos intencionadamente información de menores de 13 años.</p>
   <div class="legal-divider"></div>
-
-  <h2>9. Cambios en esta política</h2>
-  <p>Podemos actualizar esta Política de Privacidad ocasionalmente. Te notificaremos de cambios significativos a través de la app. La versión más reciente siempre estará disponible en esta página.</p>
-
+  <h2>9. Tus derechos</h2>
+  <ul><li><strong>Acceso:</strong> Saber qué información tenemos</li><li><strong>Rectificación:</strong> Corregir información inexacta</li><li><strong>Eliminación:</strong> Solicitar eliminación de tus datos</li><li><strong>Portabilidad:</strong> Obtener una copia de tus datos</li></ul>
   <div class="legal-divider"></div>
-
-  <h2>10. Contacto</h2>
+  <h2>10. Cambios en esta política</h2>
+  <p>Podemos actualizar esta política ocasionalmente. Te notificaremos de cambios significativos a través de la app.</p>
+  <div class="legal-divider"></div>
+  <h2>11. Contacto</h2>
   <div class="contact-box">
     <strong>Novark Systems</strong>
     <span>📧 <a href="mailto:novarksystemstech@gmail.com">novarksystemstech@gmail.com</a></span>
     <span>🇵🇪 Lima, Perú · RUC: 10759325759</span>
   </div>
-
   <div style="margin-top:40px;text-align:center">
     <a href="/" class="btn-ghost" style="font-size:0.9rem;padding:12px 28px">← Volver al inicio</a>
   </div>
 </div>
-
 </Layout>
